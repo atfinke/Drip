@@ -10,23 +10,19 @@ import Cocoa
 
 class ClearWindow: NSWindow {
 
+    // MARK: - Initalization
+
     override init(contentRect: NSRect, styleMask style: NSWindow.StyleMask, backing backingStoreType: NSWindow.BackingStoreType, defer flag: Bool) {
 
         super.init(contentRect: contentRect,
                    styleMask: .borderless,
-                   backing: .buffered,
-                   defer: false)
+                   backing: backingStoreType,
+                   defer: flag)
 
-        isOpaque = false
-        backgroundColor = NSColor.clear
-        isMovableByWindowBackground = true
         level = .floating
-
-        hasShadow = false
+        collectionBehavior = .canJoinAllSpaces
 
         self.styleMask.insert(.titled)
-
-        collectionBehavior = .canJoinAllSpaces
     }
 
 }

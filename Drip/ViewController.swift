@@ -16,6 +16,8 @@ class ViewController: NSViewController {
     @IBOutlet weak var playPauseButton: NSButton!
     @IBOutlet weak var ratePopUpButton: NSPopUpButton!
 
+    // MARK: - Properties
+    
     var playbackRate: Float = 1.0 {
         didSet {
             audioPlayer?.rate = playbackRate
@@ -129,6 +131,7 @@ class ViewController: NSViewController {
         openPanel.allowsMultipleSelection = false
         openPanel.canChooseDirectories = false
         openPanel.canChooseFiles = true
+        openPanel.canDownloadUbiquitousContents = false
         openPanel.begin { result in
             if result == .OK, let url = openPanel.url {
                 select(url)
