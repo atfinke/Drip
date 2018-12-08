@@ -20,7 +20,6 @@ class ClearWindow: NSWindow {
                    defer: flag)
 
         level = .floating
-        collectionBehavior = .canJoinAllSpaces
 
         self.styleMask.insert(.titled)
     }

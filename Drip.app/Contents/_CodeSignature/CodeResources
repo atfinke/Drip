@@ -4,21 +4,25 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Resources/Assets.car</key>
+		<data>
+		2zmlTiptvAxVzMnHC9ekLgVtoLs=
+		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		WV/jZtD/F7pc3cV7Fe7qLfhs0H4=
+		45PFWskYb4U7YWhuKNiLPIx7YfA=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib</key>
 		<data>
-		vCGw7ook5vgm+EAOrxDaOEAVvVk=
+		MCmR9Zbxa7o6bFAoDqOSoBuTBTs=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib</key>
 		<data>
-		a9yumx/dyg+bdvR7j4rAZXR9BsI=
+		uUiozzRnP7nG5nwnU2g41ZCljko=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/jsX-ry-rbS-view-qed-0p-7cS.nib</key>
 		<data>
-		oQNfwIyLPxy3tUc2GMOK+ojA0yg=
+		J8SBUdkbkX3Eac+wEpol6o7/SYw=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -194,32 +198,39 @@
 			<key>requirement</key>
 			<string>anchor apple generic and identifier "com.apple.dt.runtime.swiftsimd" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "72S993BNAV")</string>
 		</dict>
+		<key>Resources/Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			BvmTsftMcSOnlvqo7j7hLD4WOcmfX2SbhnRr/a2kWBM=
+			</data>
+		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fzhqvmBe99+xXZP/7sjuN2QwHKm0cYaLTi2G3OLEqms=
+			Ncj/YYGowiJbpA5IntpwjrgStVBIZuBUHOrBFobafpE=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HHkG/uwvwuFj7rk5hxK4GIblNS0uE8Bm726KxGGDiig=
+			cQCYteuDkX3VPzKCCKytp4j+xUYi1VjtUtQzUZkVaa4=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PH4fSOIVoY8wW5OvbMQY2YuCqNVVT5O6jHOCzaPwOpk=
+			gdAO4bpzViRg1S9dvHdqKQHXK8TGjr79cQWeyt/EkuE=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/jsX-ry-rbS-view-qed-0p-7cS.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nDXJY+Zd6Wmo5BGV+0q3TipBUSoWx+G2v+qhpsxRze8=
+			on0E/JJz3cgYU/NKnjMe8yBPLrd/7U4n2g81uXX8U74=
 			</data>
 		</dict>
 	</dict>

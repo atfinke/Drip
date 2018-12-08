@@ -39,6 +39,10 @@ class ViewController: NSViewController {
         super.awakeFromNib()
         view.window?.title = "Drip"
 
+        NSEvent.addGlobalMonitorForEvents(matching: .keyDown) { event in
+            print(1)123
+        }
+
         NSEvent.addLocalMonitorForEvents(matching: .keyDown) { event in
             if (event.modifierFlags.rawValue & NSEvent.ModifierFlags.command.rawValue) > 0,
                 event.keyCode == 31 {
@@ -112,19 +116,16 @@ class ViewController: NSViewController {
     }
 
     @IBAction func selectFilePressed(_ sender: Any?) {
-        func select(_ url: URL) {
+        func select(_ url: URL) throws {
             audioPlayer?.stop()
             audioPlayer = nil
-            do {
-                let player = try AVAudioPlayer(contentsOf: url)
-                player.enableRate = true
-                player.rate = playbackRate
-                player.prepareToPlay()
-                audioPlayer = player
-                isPlaying = true
-            } catch {
-                fatalError(error.localizedDescription)
-            }
+
+            let player = try AVAudioPlayer(contentsOf: url)
+            player.enableRate = true
+            player.rate = playbackRate
+            player.prepareToPlay()
+            audioPlayer = player
+            isPlaying = true
         }
 
         let openPanel = NSOpenPanel()
@@ -134,9 +135,17 @@ class ViewController: NSViewController {
         openPanel.canDownloadUbiquitousContents = false
         openPanel.begin { result in
             if result == .OK, let url = openPanel.url {
-                select(url)
                 self.trackTitle = String(url.lastPathComponent.split(separator: ".")[0])
-                self.updateProgress()
+                do {
+                    try select(url)
+                    self.updateProgress()
+                } catch {
+                    let alert = NSAlert()
+                    alert.messageText = "Failed to load audio file."
+                    alert.informativeText = "Unable to load \(self.trackTitle)."
+                    alert.alertStyle = .critical
+                    alert.runModal()
+                }
             }
         }
     }
