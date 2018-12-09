@@ -39,10 +39,6 @@ class ViewController: NSViewController {
         super.awakeFromNib()
         view.window?.title = "Drip"
 
-        NSEvent.addGlobalMonitorForEvents(matching: .keyDown) { event in
-            print(1)123
-        }
-
         NSEvent.addLocalMonitorForEvents(matching: .keyDown) { event in
             if (event.modifierFlags.rawValue & NSEvent.ModifierFlags.command.rawValue) > 0,
                 event.keyCode == 31 {
