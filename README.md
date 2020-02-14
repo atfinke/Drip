@@ -1,6 +1,6 @@
 # Drip
 
-Super simple utility for helping me transcibe interviews. 
+Super simple utility for helping me transcribe interviews. 
 
 Floating window + easy keyboard shortcuts + playback rate adjustment.
 
